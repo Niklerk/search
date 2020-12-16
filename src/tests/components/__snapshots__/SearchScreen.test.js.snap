@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test for <SearchScreen /> should be show the default values 1`] = `
+<div
+  className="m-3"
+>
+  <h1>
+    Search 
+  </h1>
+  <hr />
+  <div>
+    <form
+      className="row g-3"
+      onSubmit={[Function]}
+    >
+      <div
+        className="input-group"
+      >
+        <div
+          className="col-md-6"
+        >
+          <input
+            autoComplete="off"
+            className="form-control"
+            name="searchText"
+            onChange={[Function]}
+            placeholder="Search..."
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          className="col-md-3"
+        >
+          <select
+            className="form-control"
+            name="searchOption"
+            onChange={[Function]}
+            placeholder="Find your hero"
+            type="text"
+            value="1"
+          >
+            <option
+              className="dropdown-item"
+              key="1"
+              value="1"
+            >
+              google
+            </option>
+            <option
+              className="dropdown-item"
+              key="2"
+              value="2"
+            >
+              bing
+            </option>
+            <option
+              className="dropdown-item"
+              key="3"
+              value="3"
+            >
+              both
+            </option>
+          </select>
+        </div>
+        <div
+          className="col-md-3"
+        >
+          <button
+            className="btn btn-block btn-primary"
+            disabled={false}
+            type="submit"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div
+    className="col-12 mt-3"
+  >
+    <h4>
+      Results
+    </h4>
+    <hr />
+    <div
+      className="card-columns"
+    />
+  </div>
+</div>
+`;

@@ -25,7 +25,6 @@ export const SearchScreen = () => {
   
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log(searchText,'searchText');
     if (searchText) {
       getResults(+searchOption);
     }

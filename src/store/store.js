@@ -9,7 +9,7 @@ const composeEnhancers =
   compose;
 const reducers = combineReducers({
   search: searchReducer,
-  ui: uiReducer
+  ui: uiReducer,
 });
 
 export const store = createStore(

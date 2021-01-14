@@ -14,5 +14,5 @@ export const searchData = [
 ];
 
 export const messages = {
-  uiErrorMessage: 'Something went wrong!!'
-}
+  uiErrorMessage: "Something went wrong!!",
+};

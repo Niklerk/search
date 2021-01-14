@@ -15,14 +15,13 @@ export const SearchScreen = () => {
   const { search } = useSelector((state) => state);
   const { loading } = useSelector((state) => state.ui);
 
-  
   const [formValues, handleInputChange] = useForm({
-    searchText: '',
-    searchOption: '1',
+    searchText: "",
+    searchOption: "1",
   });
 
   const { searchText, searchOption } = formValues;
-  
+
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchText) {
@@ -30,7 +29,7 @@ export const SearchScreen = () => {
     }
   };
 
-  const getResults = (searchOption)=>{
+  const getResults = (searchOption) => {
     switch (searchOption) {
       case 1:
         dispatch(startSearchGoogle(searchText));
@@ -42,10 +41,10 @@ export const SearchScreen = () => {
         dispatch(startSearchBoth(searchText));
         break;
       default:
-        Swal.fire('Error', types.uiErrorMessage, 'error');
+        Swal.fire("Error", types.uiErrorMessage, "error");
         break;
     }
-  }
+  };
   return (
     <div className="m-3">
       <h1>Search </h1>
@@ -85,10 +84,10 @@ export const SearchScreen = () => {
               </select>
             </div>
             <div className="col-md-3">
-              <button 
-              className="btn btn-block btn-primary"
-              disabled={loading}
-              type="submit" 
+              <button
+                className="btn btn-block btn-primary"
+                disabled={loading}
+                type="submit"
               >
                 Search
               </button>

@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 import { guidGenerator } from "../common/guidGenerator";
-import { keys } from "../config/keys";
 import { messages } from "../data/searchData";
+import { fetchBing, fetchGoogle } from "../helper/helper";
 import { types } from "../types/types";
 import { finishLoading, startLoading } from "./ui";
 
@@ -51,27 +51,6 @@ export const startSearchBoth = (searchText) => {
       Swal.fire("Error", messages.uiErrorMessage, "error");
     }
   };
-};
-
-const fetchGoogle = async (searchText) => {
-  const response = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${keys.google}&cx=${keys.cx}&q=${searchText}`
-  );
-  const { items } = await response.json();
-  return items;
-};
-
-const fetchBing = async (searchText) => {
-  const response = await fetch(
-    `https://api.bing.microsoft.com/v7.0/search?q=${searchText}`,
-    {
-      headers: {
-        "Ocp-Apim-Subscription-Key": keys.bing,
-      },
-    }
-  );
-  const { webPages } = await response.json();
-  return webPages.value;
 };
 
 const dataGoogleToCommonObject = (data) => {
